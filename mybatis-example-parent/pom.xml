@@ -17,5 +17,6 @@
 
   <modules>
     <module>01-jdbc</module>
+    <module>02-mybatis</module>
   </modules>
 </project>
