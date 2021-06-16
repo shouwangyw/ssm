@@ -21,7 +21,7 @@
 
   <!-- 映射文件加载 -->
   <mappers>
-    <!-- resource指定映射文件的类路径 -->
-    <mapper resource="mapper/UserMapper.xml"/>
+    <!-- 批量加载 -->
+    <package name="com.yw.mybatis.example.mapper.annotation"/>
   </mappers>
 </configuration>

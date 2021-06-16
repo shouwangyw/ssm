@@ -21,7 +21,7 @@ public class XmlUserMapperTest {
     public void init() {
         try {
             // 指定全局配置文件路径
-            String resource = "SqlMapConfig.xml";
+            String resource = "XmlSqlMapConfig.xml";
             // 加载资源文件（全局配置文件和映射文件）
             InputStream inputStream = Resources.getResourceAsStream(resource);
             // 用构建者模式，去创建SqlSessionFactory对象

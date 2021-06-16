@@ -12,7 +12,7 @@ import java.io.InputStream;
 /**
  * @author yangwei
  */
-public class MybatisTest {
+public class UserDaoTest {
     private SqlSessionFactory sqlSessionFactory;
 
     @Before
