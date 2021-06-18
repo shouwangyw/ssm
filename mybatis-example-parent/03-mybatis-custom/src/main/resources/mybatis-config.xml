@@ -5,7 +5,7 @@
       <!-- 配置数据源信息 -->
       <dataSource type="DBCP">
         <property name="db.driver" value="com.mysql.jdbc.Driver" />
-        <property name="db.url" value="jdbc:mysql://192.168.254.128:3306/kaikeba?characterEncoding=utf-8" />
+        <property name="db.url" value="jdbc:mysql://192.168.254.128:3306/ssm?characterEncoding=utf-8" />
         <property name="db.username" value="root" />
         <property name="db.password" value="123456" />
       </dataSource>
@@ -18,3 +18,4 @@
     <mapper resource="mapper/UserMapper.xml" />
   </mappers>
 </configuration>
+

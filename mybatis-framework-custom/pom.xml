@@ -4,28 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.yw.mybatis.example</groupId>
-    <artifactId>mybatis-example-parent</artifactId>
-    <version>1.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
+  <groupId>com.yw.mybatis.framework</groupId>
+  <artifactId>mybatis-framework-custom</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
 
-  <artifactId>03-mybatis-custom</artifactId>
-  <packaging>jar</packaging>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
 
   <dependencies>
-    <!-- 引入自定义mybatis框架 -->
+    <!-- OGNL表达式的依赖 -->
     <dependency>
-      <groupId>com.yw.mybatis.framework</groupId>
-      <artifactId>mybatis-framework-custom</artifactId>
-      <version>1.0</version>
-    </dependency>
-    <!-- mysql依赖 -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.35</version>
+      <groupId>ognl</groupId>
+      <artifactId>ognl</artifactId>
+      <version>2.7.2</version>
     </dependency>
     <!-- DOM4J依赖 -->
     <dependency>
@@ -33,17 +28,23 @@
       <artifactId>dom4j</artifactId>
       <version>1.6.1</version>
     </dependency>
+    <!-- xpath依赖 -->
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+      <version>1.1.6</version>
+    </dependency>
     <!-- dbcp连接池依赖 -->
     <dependency>
       <groupId>commons-dbcp</groupId>
       <artifactId>commons-dbcp</artifactId>
       <version>1.4</version>
     </dependency>
-    <!-- OGNL表达式的依赖 -->
+    <!-- mysql依赖 -->
     <dependency>
-      <groupId>ognl</groupId>
-      <artifactId>ognl</artifactId>
-      <version>2.7.2</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.35</version>
     </dependency>
     <!-- junit单元测试依赖 -->
     <dependency>
@@ -54,7 +55,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.12</version>
+      <version>1.18.10</version>
     </dependency>
   </dependencies>
 
@@ -71,13 +72,5 @@
         </configuration>
       </plugin>
     </plugins>
-    <resources>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-      </resource>
-    </resources>
   </build>
 </project>
