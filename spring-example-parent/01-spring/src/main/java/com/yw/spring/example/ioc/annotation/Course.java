@@ -1,0 +1,19 @@
+package com.yw.spring.example.ioc.annotation;
+
+import org.springframework.stereotype.Component;
+
+/**
+ * @author yangwei
+ */
+@Component
+public class Course {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
