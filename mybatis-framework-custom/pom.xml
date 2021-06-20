@@ -7,7 +7,7 @@
   <groupId>com.yw.mybatis.framework</groupId>
   <artifactId>mybatis-framework-custom</artifactId>
   <version>1.0</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
