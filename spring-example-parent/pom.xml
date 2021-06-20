@@ -19,4 +19,8 @@
     <module>01-spring</module>
     <module>02-spring-custom</module>
   </modules>
+
+  <dependencies>
+
+  </dependencies>
 </project>
