@@ -13,6 +13,10 @@
   <artifactId>01-spring</artifactId>
   <packaging>jar</packaging>
 
+  <properties>
+    <springframework-version>5.0.7.RELEASE</springframework-version>
+  </properties>
+
   <dependencies>
     <!-- dbcp连接池依赖 -->
     <dependency>
@@ -30,21 +34,21 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
-      <version>5.0.7.RELEASE</version>
+      <version>${springframework-version}</version>
       <scope>compile</scope>
     </dependency>
     <!-- spring-tx -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
-      <version>5.0.7.RELEASE</version>
+      <version>${springframework-version}</version>
       <scope>compile</scope>
     </dependency>
     <!-- spring-jdbc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>5.0.7.RELEASE</version>
+      <version>${springframework-version}</version>
       <scope>compile</scope>
     </dependency>
     <!-- aspectj -->
@@ -58,7 +62,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>5.0.7.RELEASE</version>
+      <version>${springframework-version}</version>
       <scope>compile</scope>
     </dependency>
     <!-- cglib -->

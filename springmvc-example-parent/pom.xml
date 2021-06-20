@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.yw.spring.example</groupId>
-  <artifactId>spring-example-parent</artifactId>
+  <groupId>com.yw.springmvc.example</groupId>
+  <artifactId>springmvc-example-parent</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
 
@@ -16,7 +16,6 @@
   </properties>
 
   <modules>
-    <module>01-spring</module>
-    <module>02-spring-custom</module>
+    <module>01-springmvc</module>
   </modules>
 </project>

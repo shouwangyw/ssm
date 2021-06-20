@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>springmvc</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!--
+  	学习前置条件
+  	问题1：web.xml中servlet、filter、listener、context-param加载顺序
+  	问题2：load-on-startup标签的作用，影响了servlet对象创建的时机
+  	问题3：url-pattern标签的配置方式有四种：
+  		/dispatcherServlet
+  		/servlet/*
+  		*
+  		/
+  		加载顺序是如何的
+  	问题4：url-pattern标签配置为/*报错，原因是它拦截了JSP请求，但是又不能处理JSP请求，为什么配置/就不拦截JSP请求？
+  	问题5：配置了springmvc去读取spring配置文件之后，就产生了spring父子容器的问题
+   -->
+
+  <!-- 配置前端控制器 -->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--
+      设置spring配置文件路径
+      如果不设置初始化参数，那么DispatcherServlet会读取默认路径下的配置文件（即：/WEB-INF/springmvc-servlet.xml）
+     -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springmvc.xml</param-value>
+    </init-param>
+    <!--
+      指定初始化时机，设置为2，表示Tomcat启动时，DispatcherServlet会跟随着初始化
+      如果不指定初始化时机，DispatcherServlet就会在第一次被请求的时候，才会初始化，而且只会初始化一次
+     -->
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <!--
+      URL-PATTERN的设置
+      不要设置为/*，否则会报错
+      通俗理解：/*会拦截整个项目中的资源访问，包含JSP和静态资源的访问，对于静态资源的访问 spring mvc提供了默认的Handler处理器
+      烦死对于JSP来讲，spring mvc没有提供默认的处理器，我们也没有手动编写对应的处理器，此时按照spring mvc的处理流程分析得知，他短路了
+     -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
