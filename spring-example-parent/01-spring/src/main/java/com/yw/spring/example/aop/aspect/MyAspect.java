@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class MyAspect {
     private static final String pointcut = "execution(* *..*.*ServiceImpl.*(..))";
 
-    // @Beafore：标记该方法是一个前置通知
+    // @Before：标记该方法是一个前置通知
     // value：切入点表达式
     @Before(value = "MyAspect.fn()")
     public void before() {
