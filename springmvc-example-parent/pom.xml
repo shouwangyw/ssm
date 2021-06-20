@@ -17,5 +17,6 @@
 
   <modules>
     <module>01-springmvc</module>
+    <module>02-springmvc-ssm</module>
   </modules>
 </project>
