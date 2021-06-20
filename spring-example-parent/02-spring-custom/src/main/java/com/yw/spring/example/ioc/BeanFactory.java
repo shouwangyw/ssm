@@ -13,8 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用面向过程思维和配置文件的方式去实现容器化管理Bean
- *
  * 解决的是扩展性问题：通过配置的方式去解决扩展性问题
  *      使用XML配置文件进行Bean的创建
  *      1.管理要new出来的bean的class信息（要new几个对象，就需要配置几个class信息）
