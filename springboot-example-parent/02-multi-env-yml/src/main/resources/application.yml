@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    # 选择执行开发环境
+    active: dev
+
+---
+# 配置开发环境下当前应用的端口号与上下文路径
+spring:
+  profiles: dev
+server:
+  port: 8888
+  servlet:
+    context-path: /dev
+
+---
+# 配置生产环境下当前应用的端口号与上下文路径
+spring:
+  profiles: prod
+server:
+  port: 80
+  servlet:
+    context-path: /prod
