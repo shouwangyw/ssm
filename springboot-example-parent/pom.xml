@@ -23,6 +23,7 @@
 
   <modules>
     <module>01-primary</module>
+    <module>01-primary-war</module>
   </modules>
 
   <dependencies>
