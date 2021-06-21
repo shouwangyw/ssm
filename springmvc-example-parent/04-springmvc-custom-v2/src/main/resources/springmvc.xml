@@ -1,0 +1,12 @@
+<beans>
+  <!-- 配置处理器映射器 -->
+  <bean class="com.yw.springmvc.framework.mapping.impl.BeanNameUrlHandlerMapping"/>
+
+  <!-- 配置处理器适配器 -->
+  <bean class="com.yw.springmvc.framework.adapter.impl.HttpRequestHandlerAdapter"/>
+  <bean class="com.yw.springmvc.framework.adapter.impl.SimpleControllerHandlerAdapter"/>
+
+  <!-- 配置处理器 -->
+  <bean name="/queryUser" class="com.yw.springmvc.example.handler.QueryUserHandler" />
+  <bean name="/saveUser" class="com.yw.springmvc.example.handler.SaveUserHandler" />
+</beans>

@@ -1,9 +1,0 @@
-<beans>
-  <!-- 配置处理器映射器 -->
-  <bean class="com.yw.springmvc.example.mapping.impl.BeanNameUrlHandlerMapping"/>
-  <bean class="com.yw.springmvc.example.mapping.impl.SimpleUrlHandlerMapping"/>
-
-  <!-- 配置处理器适配器 -->
-  <bean class="com.yw.springmvc.example.adapter.impl.HttpRequestHandlerAdapter"/>
-  <bean class="com.yw.springmvc.example.adapter.impl.SimpleControllerHandlerAdapter"/>
-</beans>

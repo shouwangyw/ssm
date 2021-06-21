@@ -19,5 +19,6 @@
     <module>01-springmvc</module>
     <module>02-springmvc-ssm</module>
     <module>03-springmvc-custom-v1</module>
+    <module>04-springmvc-custom-v2</module>
   </modules>
 </project>

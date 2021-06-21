@@ -1,6 +1,6 @@
-package com.yw.springmvc.example.handler.impl;
+package com.yw.springmvc.example.handler;
 
-import com.yw.springmvc.example.handler.HttpRequestHandler;
+import com.yw.springmvc.framework.handler.HttpRequestHandler;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +14,6 @@ public class QueryUserHandler implements HttpRequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain;charset=utf-8");
-        response.getWriter().write("--- QueryUserHandler V1 ---");
+        response.getWriter().write("--- QueryUserHandler V2 ---");
     }
 }

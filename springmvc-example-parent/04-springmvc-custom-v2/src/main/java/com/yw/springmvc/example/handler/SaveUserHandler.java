@@ -1,7 +1,7 @@
-package com.yw.springmvc.example.handler.impl;
+package com.yw.springmvc.example.handler;
 
-import com.yw.springmvc.example.handler.SimpleControllerHandler;
-import com.yw.springmvc.example.model.ModelAndView;
+import com.yw.springmvc.framework.handler.SimpleControllerHandler;
+import com.yw.springmvc.framework.model.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +15,7 @@ public class SaveUserHandler implements SimpleControllerHandler {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain;charset=utf-8");
-        response.getWriter().write("--- SaveUserHandler V1 ---");
+        response.getWriter().write("--- SaveUserHandler V2 ---");
         return null;
     }
 }
