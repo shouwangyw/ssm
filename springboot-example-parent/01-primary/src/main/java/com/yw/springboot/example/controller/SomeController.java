@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SomeController {
     @RequestMapping("/some")
     public String someHandle() {
+        int i = 3 / 0;
         return "Hello Spring Boot World! ";
     }
 
