@@ -28,6 +28,7 @@
     <module>02-multi-env-yml</module>
     <module>03-custom-config</module>
     <module>04-use-jsp</module>
+    <module>05-use-mybatis</module>
   </modules>
 
   <dependencies>
