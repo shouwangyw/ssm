@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${welcome}">这里将显示数据</p>
+<div th:text="${welcome}">这里将显示数据</div>
+<span th:text="${welcome}">这里将显示数据</span>
+<hr>
+<p th:if="${gender} == 'male'">男</p>
+<p th:if="${gender} == 'female'">女</p>
+
+</body>
+</html>
