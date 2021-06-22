@@ -31,6 +31,7 @@
     <module>04-use-jsp</module>
     <module>05-use-mybatis</module>
     <module>06-use-redis</module>
+    <module>07-interceptor</module>
   </modules>
 
   <dependencies>
