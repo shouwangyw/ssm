@@ -32,6 +32,8 @@
     <module>05-use-mybatis</module>
     <module>06-use-redis</module>
     <module>07-interceptor</module>
+    <module>08-servlet-annotation</module>
+    <module>08-servlet-config</module>
   </modules>
 
   <dependencies>
