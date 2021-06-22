@@ -6,4 +6,13 @@
   <insert id="insertStudent">
     insert into student(`name`, age) values(#{name}, #{age})
   </insert>
+
+  <select id="selectStudentById" parameterType="int"
+          resultType="com.yw.springboot.example.dao.po.Student">
+    select id, `name`, age from student where id = #{id}
+  </select>
+
+  <select id="selectStudentsCount" resultType="int">
+    select count(id) from student
+  </select>
 </mapper>

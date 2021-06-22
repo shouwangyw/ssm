@@ -22,6 +22,7 @@
   </properties>
 
   <modules>
+    <module>00-common</module>
     <module>01-primary</module>
     <module>01-primary-war</module>
     <module>02-multi-env</module>
@@ -29,6 +30,7 @@
     <module>03-custom-config</module>
     <module>04-use-jsp</module>
     <module>05-use-mybatis</module>
+    <module>06-use-redis</module>
   </modules>
 
   <dependencies>
@@ -55,12 +57,4 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
 </project>

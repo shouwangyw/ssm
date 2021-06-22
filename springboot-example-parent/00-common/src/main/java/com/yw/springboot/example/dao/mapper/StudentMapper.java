@@ -11,4 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StudentMapper {
     int insertStudent(Student student);
+
+    Student selectStudentById(int id);
+    Integer selectStudentsCount();
 }
