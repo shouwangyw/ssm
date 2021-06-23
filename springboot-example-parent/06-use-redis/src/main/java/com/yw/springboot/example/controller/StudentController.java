@@ -14,13 +14,14 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @RequestMapping(value = "register", method = RequestMethod.POST)
-    public String registerHandle(@RequestBody Student student) {
-        boolean result = studentService.addStudent(student);
+    @PostMapping("register")
+//    public String registerHandle(@RequestBody Student student) {
+    public String registerHandle(String name, int age) {
+        boolean result = studentService.addStudent(new Student().setName(name).setAge(age));
         return "注册" + (result ? "成功" : "失败");
     }
 
-    @GetMapping("/find")
+    @GetMapping("find")
     public Student findHandle(int id) {
         return studentService.findStudentById(id);
     }

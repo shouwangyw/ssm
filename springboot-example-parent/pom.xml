@@ -34,6 +34,8 @@
     <module>07-interceptor</module>
     <module>08-servlet-annotation</module>
     <module>08-servlet-config</module>
+    <module>wrap-spring-boot-starter</module>
+    <module>09-wrapper-starter</module>
   </modules>
 
   <dependencies>

@@ -1,0 +1,8 @@
+wrapper:
+  service:
+    # 设置开关状态，默认true开启
+    enable: true
+    # 指定前缀
+    prefix: $$$
+    # 指定后缀
+    suffix: +++
