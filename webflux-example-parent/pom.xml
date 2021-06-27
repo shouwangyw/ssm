@@ -26,6 +26,7 @@
     <module>02-webflux-primary</module>
     <module>03-webflux-sse</module>
     <module>04-reactive-stream</module>
+    <module>05-webflux-ordinary</module>
   </modules>
 
   <dependencies>
