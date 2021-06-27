@@ -10,23 +10,13 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>02-webflux-primary</artifactId>
+  <artifactId>04-reactive-stream</artifactId>
   <packaging>jar</packaging>
 
-  <dependencies>
-    <!-- webflux依赖 -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-webflux</artifactId>
-    </dependency>
-  </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>11</java.version>
+  </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
 </project>
