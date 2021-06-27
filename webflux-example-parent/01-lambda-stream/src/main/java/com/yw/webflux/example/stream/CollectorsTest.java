@@ -124,7 +124,7 @@ public class CollectorsTest {
         System.out.println(scoreSummary);
         // 输出成绩的数量
         System.out.println("成绩个数：" + scoreSummary.getCount());
-        // 输出成绩中的最小值
-        System.out.println("最小成绩：" + scoreSummary.getMax());
+        // 输出成绩中的最大值
+        System.out.println("最大成绩：" + scoreSummary.getMax());
     }
 }

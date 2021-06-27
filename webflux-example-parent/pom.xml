@@ -23,6 +23,7 @@
 
   <modules>
     <module>01-lambda-stream</module>
+    <module>02-webflux-primary</module>
   </modules>
 
   <dependencies>
