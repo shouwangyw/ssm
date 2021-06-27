@@ -24,6 +24,7 @@
   <modules>
     <module>01-lambda-stream</module>
     <module>02-webflux-primary</module>
+    <module>03-webflux-sse</module>
   </modules>
 
   <dependencies>

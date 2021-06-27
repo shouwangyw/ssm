@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>custom-sse</title>
+</head>
+<script type="text/javascript">
+  var es = new EventSource("sse/custom");
+  es.addEventListener("china", function (ev) {
+    console.log("my-msg", ev.data);
+
+    if (ev.data == 9) {
+      es.close();
+    }
+  });
+</script>
+<body>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>default-sse</title>
+</head>
+<script type="text/javascript">
+  // 创建EventSource对象
+  var es = new EventSource("sse/default");
+  // 当客户端接收到服务端发送的事件时会触发该方法的执行
+  es.onmessage = function (ev) {
+    console.log("my-msg", ev.data, ev);
+    // 停止接收服务端的事件
+    if (ev.data == 9) {
+      es.close();
+    }
+  }
+</script>
+<body>
+</body>
+</html>
