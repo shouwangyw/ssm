@@ -41,14 +41,15 @@ public class StudentHandler {
     // 添加数据(带校验)
     public Mono<ServerResponse> saveValidHandler(ServerRequest request) {
         Mono<Student> studentMono = request.bodyToMono(Student.class);
-        return studentMono.flatMap(stu -> {
-            // 验证姓名
-            ValidateUtil.validName(stu.getName());
-            return ServerResponse
-                    .ok()
-                    .contentType(MediaType.APPLICATION_JSON_UTF8)
-                    .body(repository.saveAll(studentMono), Student.class);
+
+        studentMono = studentMono.map(stu -> {
+            ValidateUtil.validStudent(stu);
+            return stu;
         });
+        return ServerResponse
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .body(repository.saveAll(studentMono), Student.class);
     }
 
     // 有状态删除
@@ -78,14 +79,14 @@ public class StudentHandler {
         String id = request.pathVariable("id");
         Mono<Student> studentMono = request.bodyToMono(Student.class);
 
-        return studentMono.flatMap(stu -> {
-            // 验证姓名
-            ValidateUtil.validName(stu.getName());
+        studentMono = studentMono.map(stu -> {
+            ValidateUtil.validStudent(stu);
             stu.setId(id);
-            return ServerResponse
-                    .ok()
-                    .contentType(MediaType.APPLICATION_JSON_UTF8)
-                    .body(repository.save(stu), Student.class);
+            return stu;
         });
+        return ServerResponse
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .body(repository.saveAll(studentMono), Student.class);
     }
 }
